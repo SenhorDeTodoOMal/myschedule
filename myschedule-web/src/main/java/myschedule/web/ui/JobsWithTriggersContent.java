@@ -135,7 +135,7 @@ public class JobsWithTriggersContent extends VerticalLayout {
                                     TriggerKey triggerKey = getSelectedTriggerKey();
                                     SchedulerTemplate scheduler = mySchedule.getScheduler(schedulerSettingsName);
                                     Trigger trigger = scheduler.getTrigger(triggerKey);
-                                    scheduler.triggerJob(trigger.getJobKey());
+                                    scheduler.triggerJob(trigger.getJobKey(),trigger.getJobDataMap());
 
                                     reloadTableContent();
                                 }
